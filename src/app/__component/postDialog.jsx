@@ -57,7 +57,7 @@ export function DialogDemo({ open, onOpenChange, onPostCreated }) {
       return
     }
  
-    // ✅ 'animal_type' багана руу хадгална
+   
     const { error: insertError } = await supabase.from('pets').insert({
       description: description,
       animal_type: animalType,

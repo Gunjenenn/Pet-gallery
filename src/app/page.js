@@ -68,13 +68,13 @@ export default function SignIn() {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#09090b] text-neutral-200 px-4 antialiased selection:bg-neutral-800 selection:text-white">
       
-      {/* Background Radial Glow */}
+     
       <div className="absolute top-0 left-1/2 -z-10 h-125 w-175 -translate-x-1/2 rounded-full bg-neutral-900/40 opacity-50 blur-[120px]" />
       
-      {/* Central Auth Container */}
+      
       <div className="w-full max-w-100 rounded-2xl border border-neutral-800/80 bg-[#121214]/40 p-8 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.3)]">
         
-        {/* Header Block */}
+     
         <div className="mb-8 flex flex-col space-y-2 text-center">
           <h2 className="text-2xl font-semibold tracking-tight text-white transition-all duration-300">
             {mode === 'login' ? 'Welcome back' : 'Create an account'}
@@ -84,7 +84,7 @@ export default function SignIn() {
           </p>
         </div>
 
-        {/* Interaction Form */}
+        
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-3">
             <div className="relative">
@@ -108,7 +108,7 @@ export default function SignIn() {
             </div>
           </div>
 
-          {/* Validation Warning Area */}
+          
           {errorMsg && (
             <div className="p-3 bg-red-950/20 border border-red-900/30 rounded-lg">
               <p className="text-center text-xs font-medium text-red-400">
@@ -117,7 +117,7 @@ export default function SignIn() {
             </div>
           )}
 
-          {/* Core Submission Trigger */}
+        
           <button 
             type="submit"
             disabled={loading} 
@@ -134,7 +134,7 @@ export default function SignIn() {
             ) : mode === 'login' ? "Continue" : "Register Account"}
           </button>
 
-          {/* Interactive Flow Switcher */}
+        
           <div className="pt-4 text-center">
             <p className="text-xs text-neutral-400">
               {mode === 'login' ? "New to the platform?" : "Have an active profile?"}{" "}

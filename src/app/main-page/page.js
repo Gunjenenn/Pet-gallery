@@ -108,7 +108,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-stone-950 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-rose-950/40 via-stone-950 to-pink-950/30 text-stone-100 px-6 py-12 md:px-12 lg:px-20 selection:bg-rose-500/30 selection:text-pink-200">
       
-      {/* Header Section */}
+      
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-16 border-b border-rose-900/30 pb-8">
         <div>
           <span className="text-[11px] uppercase tracking-widest text-pink-300 font-semibold bg-rose-950/80 px-3.5 py-1 rounded-full border border-pink-500/30 shadow-xs">
@@ -132,7 +132,7 @@ export default function Home() {
         onPostCreated={loadData}
       />
 
-      {/* Grid Content */}
+      
       <div className="max-w-6xl mx-auto">
         {posts.length === 0 ? (
           <div className="text-center py-32 bg-stone-900/50 backdrop-blur-md rounded-3xl border border-stone-800 max-w-md mx-auto">
@@ -152,7 +152,7 @@ export default function Home() {
                   key={data.id} 
                   className="group bg-stone-900/70 backdrop-blur-xl border border-stone-800/80 hover:border-pink-500/30 rounded-[28px] overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-rose-950/30 transition-all duration-500 hover:-translate-y-1.5 flex flex-col"
                 >
-                  {/* Image Header */}
+                  
                   <div className="relative aspect-4/3 w-full overflow-hidden bg-stone-950">
                     <img 
                       src={publicUrlData.publicUrl} 
@@ -160,12 +160,12 @@ export default function Home() {
                       className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                     
-                    {/* Animal Type Badge */}
+            
                     <div className="absolute top-4 right-4 bg-stone-950/80 backdrop-blur-md text-pink-200 text-[10px] tracking-widest uppercase font-bold px-3 py-1 rounded-full border border-pink-500/30">
                       {data.animal_type}
                     </div>
 
-                    {/* ✅ 2. DELETE BUTTON (Зургийн зүүн дээд талд) */}
+            
                     <button
                       onClick={() => handleDelete(data.id)}
                       title="Delete post"
@@ -178,7 +178,7 @@ export default function Home() {
 
                   </div>
 
-                  {/* Card Body */}
+                  
                   <div className="p-6 flex flex-col grow justify-between gap-5">
                     
                     <div>
@@ -186,7 +186,7 @@ export default function Home() {
                         {data.description}
                       </p>
                       
-                      {/* Location Badge */}
+                      
                       <div className="flex items-center gap-1.5 mt-3 text-xs text-stone-400 font-medium">
                         <svg className="w-3.5 h-3.5 text-rose-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -196,10 +196,10 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Interactive Section */}
+                    
                     <div className="space-y-4 pt-4 border-t border-stone-800/80">
                       
-                      {/* 1. Add Comment Input Box */}
+                 
                       <div className="flex flex-col gap-2">
                         <Textarea 
                           value={data.inputText} 
@@ -216,7 +216,7 @@ export default function Home() {
                         </Button>
                       </div>
 
-                      {/* 2. Comments Display Area */}
+
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
                           <span className="text-[10px] uppercase tracking-wider font-semibold text-pink-300/60">
